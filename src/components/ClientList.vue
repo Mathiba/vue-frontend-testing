@@ -23,10 +23,9 @@
                 </template>
             </tbody>
         </table>
-        <hr>
-        <br><br>
-        <client-form @completed="addClient"></client-form>
         
+        
+       
     </div>
 </template>
 
@@ -52,11 +51,6 @@ export default {
         this.clients = response.data
         this.isLoading = false
           
-    },
-    methods: {
-        addClient(client) {
-            this.clients.push(client)
-        }
     }
 }
 </script>

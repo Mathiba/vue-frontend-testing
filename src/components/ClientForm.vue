@@ -27,7 +27,12 @@
                     <div class="form-group">
                         <label class="control-label col-sm-2" for="gender">Gender:</label>
                         <div class="col-sm-10">
-                            <input class="input" type="text" placeholder="enter client gender..." v-model="gender" @keydown="errors = ''" required>
+                            M<input class="input" value='Male' type="radio" v-model="gender" @keydown="errors = ''" required>
+                            
+                        </div>
+                        <div class="col-sm-10">
+                            F<input class="input" value='Female' type="radio" v-model="gender" @keydown="errors = ''" required>
+                            
                         </div>
                     </div> 
                     <div class="form-group">

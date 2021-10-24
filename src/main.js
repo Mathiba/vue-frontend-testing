@@ -6,12 +6,15 @@ Vue.config.productionTip = false
 
 Vue.use(VueRouter)
 
-//import Dashboard from './components/Dashboard.vue';
+import Dashboard from './components/Dashboard.vue';
 import ClientsList from './components/ClientList.vue';
+import ContactForm from './components/ClientForm.vue';
 //import Auth from './components'
 
 const routes = [
   { path: '/clients', component: ClientsList },
+  { path: '/contacts', component: ContactForm }
+  
 ]
 
 /*const routes = [
@@ -28,5 +31,5 @@ const router = new VueRouter({
 
 new Vue({
   router,
-  render: h => h(ClientsList)
+  render: h => h(Dashboard)
 }).$mount('#app')
