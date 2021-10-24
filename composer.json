@@ -1,0 +1,7 @@
+{
+    "require": {
+        "okta/jwt-verifier": "^1.2",
+        "firebase/php-jwt": "^5.4",
+        "guzzlehttp/psr7": "^2.1"
+    }
+}
