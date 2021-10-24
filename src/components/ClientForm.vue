@@ -36,7 +36,7 @@
                         </div>
                     </div> 
                     <div class="form-group">
-                        <label class="control-label col-sm-2" for="comment">Comment:</label>
+                        <label class="control-label col-sm-2" for="comment">Content:</label>
                         <div class="col-sm-10">
                             <textarea class="input" rows="4" cols="50" v-model="content" @keydown="errors = ''" required>enter client content</textarea>
                         </div>

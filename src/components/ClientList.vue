@@ -35,11 +35,11 @@
 
 <script>
 import axios from 'axios'
-import ClientForm from './ClientForm.vue'
+//import ClientForm from './ClientForm.vue'
 
 export default {
     components: {
-        ClientForm
+       // ClientForm
     },
     data() {
         return {
