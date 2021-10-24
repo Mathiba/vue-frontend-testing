@@ -1,5 +1,8 @@
 <template>
     <div>
+        <input type="text" id="filterG" v-model="search" placeholder="Search Name or filter by gender"/>
+        <br>
+        <br>
         <span class="help is-info"  v-if="isLoading">Loading...</span>
         <table class="table" v-else>
             <thead>
@@ -12,7 +15,8 @@
                 </tr>
             </thead>
             <tbody>
-                <template v-for="client in clients">
+                <template v-for="client in filteredClients">
+                    
                     <tr v-bind:key="client.id">
                         <td>{{ client.id }}</td>
                         <td>{{ client.name }}</td> 
@@ -40,17 +44,24 @@ export default {
     data() {
         return {
             clients: {},
+            search:'',
             isLoading: true,
             
         }
     },
     async created () {
-        
-        
+
         const response = await axios.get('http://localhost:8000/clients')
         this.clients = response.data
         this.isLoading = false
-          
+    },
+    computed:{
+        filteredClients:function(){
+            return this.clients.filter((client) =>{
+                return client.name.match(this.search)||client.gender.match(this.search);
+                
+            });
+        }
     }
 }
 </script>
